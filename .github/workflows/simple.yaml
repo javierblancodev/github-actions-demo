@@ -1,0 +1,27 @@
+# name of the entire workflow
+name: Shell Commands
+
+# Events (with the keyword on) that will trigger this workflow
+# We can define an event or an array of events
+on: [push]
+
+#  Define jobs with the jobs keyword
+# This is an object with the keys being the name of the job
+# Each job will run in a virtual machine
+jobs:
+    run-shell-commands:
+        # This values will be an object with some options for our job
+        # We can define the operation system through the runs-on argument
+        runs-on: ubuntu-latest
+        # We can define steps what will be an array of objects, each one represents a step
+        steps:
+          # Each step can represent an action or run some shell command
+          - name: echo a string
+          # To run a shell command we use the keyword run as a key and the name of the shell command as a value
+          # This command of couse need to match the virtual machine shell, for example echo can be use in the ubuntu VM
+            run: echo "Hello World"
+          - name: multiline script
+            # We can use the pipe to specify multiple commands 
+            run: |
+              node -v
+              npm -v

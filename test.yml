@@ -1,0 +1,43 @@
+name: Juan 
+address: "city: Seville"
+age: 34
+active: true
+key:
+  key1: value
+  key2: 33
+  key3:
+    key31: 12
+    key32: 13
+    key33: This is a third key
+customer: {
+  "name": "Juan",
+  "age": 34,
+  "address": {
+    "number": 12,
+    "street": "Adolfo Dominguez"
+  }
+}
+shopping_list:
+  - oranges
+  - bananas
+    oranges
+  - tomatoes
+  - budget: 90
+jsonArray: [1, 2, three, 'four']
+objectsArray:
+  - {
+      key: pair,
+      key2: pair2
+    }
+  - {
+      key3: pair3,
+      key4: pair4
+    }
+longText: >
+    asdmalsmd lakmsdlamsld lmaksldmasld laksmdlakmsd aslkdmalskmd lakmsdlkamsd alkmsdlkm
+    asdmalskdm ajsdkjansd knaskddn kasndansd kjansdkjnasd jknaksnddjasd kjnanskdna sdjakasnd
+    asdlkasdlkmas alskmdask
+longText2: |
+    asdmalsmd lakmsdlamsld lmaksldmasld laksmdlakmsd aslkdmalskmd lakmsdlkamsd alkmsdlkm
+    asdmalskdm ajsdkjansd knaskddn kasndansd kjansdkjnasd jknaksnddjasd kjnanskdna sdjakasnd
+    asdlkasdlkmas alskmdask
