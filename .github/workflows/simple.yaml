@@ -9,7 +9,7 @@ on: [push]
 # This is an object with the keys being the name of the job
 # Each job will run in a virtual machine
 jobs:
-    run-shell-commands:
+  run-shell-commands:
         # This values will be an object with some options for our job
         # We can define the operation system through the runs-on argument
         runs-on: ubuntu-latest
@@ -31,3 +31,12 @@ jobs:
               import platform
               print(platform.processor())
             shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+        # Do no need to specify the shell since it will take its default according to the os specify above
+      - name: Directory Bash
+        run: pwd
+        shell: bash
