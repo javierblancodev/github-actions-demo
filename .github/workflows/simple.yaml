@@ -33,6 +33,8 @@ jobs:
             shell: python
   run-windows-commands:
     runs-on: windows-latest
+    # jobs can be execute in parallel (by default) or in series (by using the key needs and a list of jobs that the particular job depends on)
+    needs: ["run-shell-commands"]
     steps:
       - name: Directory Powershell
         run: Get-Location
