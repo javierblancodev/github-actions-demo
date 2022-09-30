@@ -1,0 +1,22 @@
+name: Actions workflow
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Actions
+        id: greet
+        # uses takes a reference to an action
+        #we can create our own actions and hold them in a subfolder in the same project (relative path without quotes) or get an already created action from a public repository (url-end-point@released-version-or-branch-name)
+        #We can also use branches or commis but definetively the safe way is to use the commit since this will not change making our coede to break if this introduce some incompatibility to our code here
+        uses: actions/hello-world-javascript-actions@v1
+          # better go back to watch the video tutorial again
+        with:
+          # pass arguments define in the action documentation
+          who-to-greet: Javier
+      - name: Log Greetings Time
+        run: echo "${{ steps.greet.outputs.time }}"
+          
+          
